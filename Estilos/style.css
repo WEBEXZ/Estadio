@@ -1,6 +1,6 @@
 body
 {
-    background-color: orange;
+    background-color: #DF7401;
     font-family: Arial,Helvetica,sans-serif;
 }
 
@@ -11,6 +11,12 @@ h1
     font-size: 36px;
     margin-bottom: 50px;
     text-align: center;
+}
+
+#imgMostrar
+{
+	border: 1px solid black;
+	border-radius: 25px;
 }
 
 #titulo
@@ -26,20 +32,6 @@ user,pass
     padding: 5px;
     margin-left:20%;
     display: inline-block;
-    margin-bottom: 30px;
-}
-
-clave
-{
-    padding: 5px;
-    margin-left:30%;
-    margin-bottom: 30px;
-}
-
-buscar
-{
-    padding: 5px;
-    margin-left:40%;
     margin-bottom: 30px;
 }
 
@@ -107,12 +99,12 @@ table td:not(:last-child)
  
 table tr:nth-child(2n) 
 {
-    background: #87CEEB;
+    background: #FAAC58;
 }
  
 table tr:nth-child(2n+1)
 {
-    background: #ADD8E6;
+    background: #FAAC58;
 }
  
 table.header tr:not(:first-child):hover, table:not(.header) tr:hover 
@@ -138,23 +130,6 @@ table.header tr:nth-child(n+2)
     text-align: right;
 }
 
-#lmenu
-{
-    color:black;
-    font-family: fantasy;
-    font-size: 20px;
-    margin-left: 500px;
-}
-
-#mdescuento,#marea,#mcantidad,#mdisponible,#mkey,#mnombre,#mpartido,#mtipo_venta,#mzona,#mboton
-{
-    alignment-adjust: auto;
-    color:black;
-    font-family: monospace;
-    font-size: 16px;
-    margin-left: 800px;
-}
-
 nav ul li
 {
    display:inline-block;
@@ -167,12 +142,14 @@ nav ul li
    -moz-transition:all 0.5s linear;
    -o-transition:all 0.5s linear;
 }
+
 nav ul li:hover
 {
  background-color:white;
  color:black;
  border-radius:5px;
 }
+
 nav ul li a
 {
  text-decoration:none;

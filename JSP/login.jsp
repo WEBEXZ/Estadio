@@ -10,6 +10,19 @@
         <script type="text/javascript" src="./JavaScript/ajax.js"></script>
     </head>
     <body>
+        
+        <center>
+        <div id="menu">
+            <nav>
+            <ul>
+		<li class="active"><a href="index.jsp">HOME</a></li>
+		<li><a href="login.jsp">LOGIN</a></li>
+		<li><a href="ventas.jsp">COMPRAR</a></li>
+            </ul>
+            </nav>
+        </div>
+    </center>
+    
         <center>
             <h1>LOGIN DE USUARIOS</h1>
             <h2>ACCESO: <%=new Date()%></h2>

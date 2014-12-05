@@ -1,14 +1,48 @@
 <web-app>
   <display-name>AjaxLogin</display-name>
-  <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
-  </welcome-file-list>
+  
+  <!--<welcome-file-list>
+    <welcome-file>ventas.jsp</welcome-file>
+  </welcome-file-list>-->
+  
   <servlet>
     <servlet-name>JqueryServlet</servlet-name>
     <servlet-class>Acciones.JqueryServlet</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>JqueryServlet</servlet-name>
     <url-pattern>/JqueryServlet/*</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Seleccionar</servlet-name>
+    <servlet-class>Acciones.Seleccionar</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Seleccionar</servlet-name>
+    <url-pattern>/Seleccionar/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Enviar</servlet-name>
+    <servlet-class>Acciones.Enviar</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Enviar</servlet-name>
+    <url-pattern>/Enviar/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Venta</servlet-name>
+    <servlet-class>Acciones.Venta</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Venta</servlet-name>
+    <url-pattern>/Venta/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

@@ -36,7 +36,6 @@ public class JqueryServlet extends HttpServlet
     protected void doPost(HttpServletRequest request,
         HttpServletResponse response) throws ServletException, IOException 
     {
-
         String usuario = request.getParameter("usuario");
         String contrasena = request.getParameter("contrasena");
         

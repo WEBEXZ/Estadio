@@ -21,7 +21,7 @@
         </div>
     </center>
         
-    <center><img name="miImagen" id='imgMostrar' WIDTH=378 HEIGHT=250></center>
+    <center><img name="miImagen" id='imgMostrar' WIDTH=478 HEIGHT=350></center>
         <script>
             i = 0;
             direccion = new Array();

@@ -7,10 +7,10 @@ import javax.swing.JOptionPane;
 
 public class Conexion 
 {
-    String base_datos = "bdestadio";
-    String usuario = "root";
-    String contrasena = "d4t4b453";
-    String url = "jdbc:mysql://localhost/"+base_datos; 
+    String base_datos = "feliciano";
+    String usuario = "feliciano";
+    String contrasena = "alebrijes";
+    String url = "jdbc:mysql://localhost:3307/feliciano?autoReconnect=true"+base_datos; 
     Connection conexion = null;
     
     Conexion()

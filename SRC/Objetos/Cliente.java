@@ -1,69 +1,54 @@
-package Base_Datos;
-import java.util.ArrayList;
+package Acciones;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Cliente 
 {
-    String nombre,TipoCliente;
-    ArrayList<Cliente> clientes = new ArrayList<Cliente>();
-    public Cliente()
+    static Calendar calendario = new GregorianCalendar();
+    
+    public String getClave(String nombre,String fecha,String hora)
     {
-        this.nombre = "";
-        this.TipoCliente="";
+        String clave;
+        String nom_temp = nombre.substring(0,3).toUpperCase();
+        String fecha_temp = fecha;
+        String hora_temp = hora;
+        String clave_temp = nom_temp+"-"+fecha_temp+"-"+hora_temp;
+        clave=clave_temp;
+        return clave;
     }
     
-    public Cliente(String nombre,String TipoCliente)
+    String fecha()
     {
-    	 this.nombre = nombre;
-         this.TipoCliente=TipoCliente;
+        int año = calendario.get(Calendar.YEAR);
+        int mes = calendario.get(Calendar.MONTH);
+        int dia = calendario.get(Calendar.DAY_OF_MONTH);
+        String date = año+"-"+mes+"-"+dia;
+        return date;
+        
     }
-    public void setnombre(String nombre){
-    	this.nombre=nombre;
-    }
-    public void setTipoCliente(String TipoCliente){
-    	this.TipoCliente=TipoCliente;
-    }
-    public String getNombre(){
-    	return nombre;
-    }
-    public String getTipoCliente(){
-    	return TipoCliente;
+    String tiempo()
+    {
+        int horas = calendario.get(Calendar.HOUR_OF_DAY);
+        int minutos = calendario.get(Calendar.MINUTE);
+        int segundos = calendario.get(Calendar.SECOND);
+        String tiempo = horas+"-"+minutos+"-"+segundos;
+        return tiempo;
     }
     
-    public String Informacion()
+    public double tipo(String tipo)
     {
-        String informacion = "Nombre: "+getNombre()+" Apellidos: "+getTipoCliente();
-        return informacion;
-    }
-    
-    public void agregarCliente(String nombre,String TipoCliente)
-    {
-        clientes.add(new Cliente(nombre,TipoCliente));
-    }
-    
-    
-    public String existe(String clave)
-    {
-        String encontrado = "No encontrado";
-        for(int i = 0; i < clientes.size(); i++)
+        double descuento = 0;
+        if(tipo.equals("Ordinario"))
         {
-            if(clave.equals(clientes.get(i).getTipoCliente()))
-            {
-                encontrado = "encontrado";
-            }
-        }
-        return encontrado;
-    }
-    
-    public String buscar_Nombre(String nombre)
-    {
-        String encontrado = "No encontrado";
-        for(int i = 0; i < clientes.size(); i++)
+            descuento = 0;
+        }else if(tipo.equals("Estudiante"))
         {
-            if(nombre.equals(clientes.get(i).getNombre()))
-            {
-                encontrado = clientes.get(i).getNombre();
-            }
+            descuento = 0.1;
+        }else if(tipo.equals("Nino"))
+        {
+            descuento = 0.2;
         }
-        return encontrado;
+        return descuento;
     }
 }
